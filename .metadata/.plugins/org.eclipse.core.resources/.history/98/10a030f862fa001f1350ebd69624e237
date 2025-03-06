@@ -124,9 +124,8 @@
 		function del(filename) {
 			//alert(filename);
 			
-			if (confirm('delete?')) {
 			location.href = 'ex21_del.jsp?filename=' + filename;
-			}
+			
 			event.stopPropagation();
 			return false;
 		}
