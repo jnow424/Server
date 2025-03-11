@@ -16,7 +16,7 @@ public class Ex02 {
             - Connection timed out: connect
     
             2. 아이디 X, 암호 X
-            - java.sql.SQLException: ORA-01017: 사용자명/비밀번호가 부적합, 로그온할 수 없습니다.
+            - java.sql.SQLException: ORA-01017: 사용자명/비밀번호가 부적합, 로그인할 수 없습니다.
             
             3. 서버 중지
             - 1번과 동일

@@ -1,0 +1,63 @@
+메모장 프로젝트
+- JSP Model 1
+- JDBC
+
+1. 새 프로젝트
+- New > Dynamic Web Project > "Memo" > Context Root("memo"), web.xml 체크(O)
+
+2. 구현 업무
+- 메모 CURD
+- 권한 처리 > 작성자 확인 > 수정 or 삭제
+            > 모든 사용자 > 읽기 or 쓰기
+            
+3. DB
+- Memo > "script.sql"
+
+4. 사이트 페이지 구조 설계
+
+--------------------------------------- 주제 + 요구분석 + DB + 구조
+
+5. 파일 생성 및 라이브러리 추가
+- WEB-INF > lib > jstl-1.2.jar
+                > ojdbc11.jar
+
+- 목록보기: webapp > "list.jsp"
+- 쓰기: 	webapp > "add.jsp", "addok.jsp"
+- 수정하기: webapp > "edit.jsp", "editok.jsp"
+- 삭제하기: webapp > "del.jsp", "delok.jsp"
+
+- 템플릿:   webapp > "template.jsp"
+
+- 조각:     webapp > "inc" > "header.jsp"
+                           > "asset.jsp"
+- 리소스:   webapp > "asset" > "css" > "main.css"
+                             > "js" > "main.js"
+                             > "images" X                           
+                
+- JDBC: "com.test.java" > DBUtil.java                
+
+
+경로 
+- 상대 경로
+- 절대 경로
+
+'/' > 어디서 사용했느냐?
+- 클라이언트 코드: /memo == webapp
+- 서버 코드: / == webapp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
