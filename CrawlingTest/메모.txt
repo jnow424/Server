@@ -7,7 +7,7 @@
 1. 상대방(웹사이트)이 나에게 DB 권한을 준다면.. > 가장 이상적인 방법 > 불가능!!
 2. 상대방이 외부에 OpenAPI 공개 > 제한적 + 무난한 방법~
 3. 웹 페이지의 소스를 긁어서 직접 원하는 데이터를 추출 > 크롤링
-	
+
 
 크롤링 주의점!!
 - 허가 문제, 저작권 문제
@@ -15,13 +15,40 @@
 - 크롤링 금지 사이트 > Cloudflare or reCAPCHA
 
 
+	
+
 1. 새 프로젝트
 - New > Dynamic Web Project > "CrawlingTest" > Context Root("crawling"), web.xml 체크(O)
-
 
 2. 크롤링 사전 지식
 - HTML, CSS, JavaScript 이해
 - Java > 관련 API
+
+3. 패키지
+- "com.test.java" 
+	- "Ex01.java"
+	- "Ex02.java"	
+	
+- webapp > "ex03.jsp"
+
+- com.test.java > "Ex04.java"
+                > "Item.java"
+- webapp > "ex04.jsp"
+
+
+- com.test.java > "Ex05.java"
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
