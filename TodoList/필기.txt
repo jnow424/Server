@@ -4,7 +4,9 @@ JSP Model 2 + JDBC
 - Model + View + Controller
 	- Controller: 전체적인 흐름 제어하는 역할
 	- Model: 데이터 처리 역할
-	- View: 출력 역할 
+	- View: 출력 역할
+
+
 
 1. 새 프로젝트
 - New > Dynamic Web Project > "TodoList" > Context Root("todo"), web.xml 체크(O)
@@ -19,17 +21,14 @@ JSP Model 2 + JDBC
 - TodoList > "script.sql"
 
 4. 파일
-- Controller
 - com.test.java > "Main.java"
                 > "AddOk.java"
                 > "CheckOk.java"
                 > "DelOk.java"
-  
-- Model
+                
 - "com.test.java.model" > "TodoDAO.java"
                         > "TodoDTO.java"               
 
-- View
 - webapp > WEB-INF > "views" > "main.jsp"
                              > "addok.jsp"
                              > "checkok.jsp"

@@ -39,7 +39,7 @@ public class TodoDAO {
 		
 		try {
 			
-			String sql = "select * from tblTodo order by seq desc";
+			String sql = "select * from tblTodo order by state asc, seq desc";
 			
 			rs = stat.executeQuery(sql);
 			
@@ -74,6 +74,63 @@ public class TodoDAO {
 		
 		return null;
 		
+	}
+
+	//AddOk 서블릿이 할일(todo)을 줄테니 insert 해주세요.
+	public int add(String todo) {
+		
+		try {
+			
+			String sql = "insert into tblTodo (seq, todo, state, regdate) values (seqTodo.nextVal, ?, default, default)";
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, todo);
+			
+			return pstat.executeUpdate(); //1, 0
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
+
+	//CheckOk가 seq+state 줄테니 update 해주세요.
+	public int check(TodoDTO dto) {
+
+		try {
+			
+			String sql = "update tblTodo set state = ? where seq = ?";
+			
+			pstat = conn.prepareStatement(sql);			
+			pstat.setString(1, dto.getState());
+			pstat.setString(2, dto.getSeq());
+			
+			return pstat.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
+
+	public int del(String seq) {
+		
+		try {
+			
+			String sql = "delete from tblTodo where seq = ?";
+			
+			pstat = conn.prepareStatement(sql);			
+			pstat.setString(1, seq);
+			
+			return pstat.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return 0;
 	}
 	
 }

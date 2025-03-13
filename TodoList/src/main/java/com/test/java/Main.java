@@ -15,7 +15,6 @@ import com.test.java.model.TodoDTO;
 @WebServlet("/main.do")
 public class Main extends HttpServlet {
 
-	//doget 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -28,6 +27,7 @@ public class Main extends HttpServlet {
 		TodoDAO dao = new TodoDAO();
 		
 		ArrayList<TodoDTO> list = dao.list();
+		
 		
 		//2.
 		req.setAttribute("list", list);
