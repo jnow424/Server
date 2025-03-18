@@ -1,0 +1,102 @@
+
+Ajax
+- Asynchronous JavaScript and XML
+- 비동기 자바스크립트 + XML
+- 자바스크립트를 사용해서 > 서버와 비동기 통신을 하는 기술(주고 받는 데이터의 형식이 XML이다.)
+- 클라이언트와 서버간의 XML 형식의 데이터를 주고 받는 자바스크립트 비동기 통신 기법
+- XMLHttpRequest 객체(= ajax 객체)를 사용한 통신
+- 구글맵
+- 사용자 편의성이 대폭 향상(***)
+- 시스템 운용에 도움(트래픽 감소)
+
+
+Ajax의 장점!!
+1. 화면 깜빡임(새로고침)없이 서버와 데이터 통신이 가능하다. > 100점 > 30~40점
+2. 최소한의 필요한 데이터만 통신이 가능하다. 오버헤드 감소 > 100점
+
+
+1. 새 프로젝트
+- New > Dynamic Web Project
+	- "AjaxTest"
+	- Context Root("ajax")
+	- web.xml 체크(O)
+
+2. 파일
+- AjaxTest > "script.sql"
+- "com.test.java.model" > "AjaxDAO.java"
+                        > "SurveyDTO.java"
+                        
+- "com.test.java" > "Ex01.java"
+				  > "Ex02.java"
+				  > "Ex03.java"
+				  > "Ex03Data.java"
+				  
+				  > "Ex04.java" //일반 페이지
+				  > "Ex04Data.java" //데이터 처리용 페이지(Ajax용)
+				  
+				  > "Ex05.java"
+				  > "Ex05Data.java"
+
+- "views" > "ex01.jsp"    
+          > "ex02.jsp"  
+          > "ex03.jsp"
+          > "ex03data.jsp"
+          
+          > "ex04.jsp" //일반 페이지
+          
+          > "ex05.jsp"
+                   
+- com.test.java > "Ex06.java"
+                > "Ex06Data.java"
+- views > "ex06.jsp"                
+
+
+아이디 중복 검사(전통적인 방식)
+- com.test.java > "Ex07.java"
+                > "Ex07Data.java"
+- views > "ex07.jsp"   
+	    > "ex07data.jsp"
+
+아이디 중복 검사(Ajax)
+- com.test.java > "Ex08.java"
+                > "Ex08Data.java" //ajax 응답용
+- views > "ex08.jsp"   
+
+
+
+- com.test.java > "Ex09.java"
+                > "Ex09Data.java" //ajax 응답용
+- views > "ex09.jsp"   
+
+
+
+- com.test.java > "Ex10.java"
+                > "Ex10Data.java" //ajax 응답용
+- views > "ex10.jsp"   
+
+
+	
+3. 라이브러리
+- ojdbc11.jar
+- myutil.jar
+- lombok.jar
+- jstl-1.2.jar
+
+
+	
+for > 이터레이터
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
