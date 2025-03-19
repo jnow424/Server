@@ -8,7 +8,7 @@ public class Test {
 		
 		int[] list = { 100, 200, 300 };
 		
-		for (int n : list) { //강사님은 이걸 이터레이터라고 부릉부릉
+		for (int n : list) { //향상된 for문 > (코드변환) > 이터레이터
 			System.out.println(n);
 		}
 		
