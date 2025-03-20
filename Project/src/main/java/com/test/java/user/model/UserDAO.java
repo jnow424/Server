@@ -40,7 +40,7 @@ public class UserDAO {
 			
 			String sql = "insert into tblEmail (email, validnumber, regdate) values (?, ?, default)";
 			
-			pstat = conn.prepareStatement(sql);
+			pstat = conn.prepareStatement(sql); 
 			pstat.setString(1, map.get("email"));
 			pstat.setString(2, map.get("validNumber"));
 			
