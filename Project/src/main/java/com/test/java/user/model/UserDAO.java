@@ -40,7 +40,7 @@ public class UserDAO {
 			
 			String sql = "insert into tblEmail (email, validnumber, regdate) values (?, ?, default)";
 			
-			pstat = conn.prepareStatement(sql); 
+			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, map.get("email"));
 			pstat.setString(2, map.get("validNumber"));
 			
@@ -115,6 +115,73 @@ public class UserDAO {
 		}
 		
 		return 0;
+	}
+
+	public UserDTO login(UserDTO dto) {
+		
+		try {
+			
+			String sql = "select * from tblUser where id = ? and pw = ?";
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, dto.getId());
+			pstat.setString(2, dto.getPw());
+			
+			rs = pstat.executeQuery();
+			
+			if (rs.next()) {
+				//로그인 성공
+				UserDTO result = new UserDTO();
+				
+				result.setId(rs.getString("id"));
+				result.setName(rs.getString("name"));
+				result.setPic(rs.getString("pic"));
+				
+				return result;
+				
+			} else {
+				//로그인 실패
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	public UserDTO getUser(String id) {
+		
+try {
+			
+			String sql = "select * from tblUser where id = ?";
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, id);
+			
+			rs = pstat.executeQuery();
+			
+			if (rs.next()) {
+				
+				UserDTO result = new UserDTO();
+				
+				result.setId(rs.getString("id"));
+				result.setName(rs.getString("name"));
+				result.setPic(rs.getString("pic"));
+				result.setEmail(rs.getString("intro"));
+				result.setRegdate(rs.getString("regdate"));
+				
+				return result;
+				
+			} else {
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return null;
 	}
 
 }

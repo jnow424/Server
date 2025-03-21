@@ -27,7 +27,7 @@ public class RegisterOk extends HttpServlet {
 		//4. 결과
 		
 		//1.
-		req.setCharacterEncoding("UTF-8");
+		//req.setCharacterEncoding("UTF-8"); //Filter에서 인코딩이 되버림
 		
 		try {
 			

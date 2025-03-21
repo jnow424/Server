@@ -16,6 +16,7 @@
 	
 	<main>
 		<h2>콘텐츠</h2>
+		<div>${id}:${name}</div>
 		
 	</main>	
 	

@@ -55,6 +55,12 @@
 	                       > "LoginOk.java"		//로그인 처리
 	                       > "LogoutOk.java"	//로그아웃 처리
 	                       > "Info.java"		//자기 정보
+	                       
+	                       > "SendMail.java"	//인증 메일 발송(ajax)
+	                       > "MailSender.java"	//메일 발송기
+	                       > "DelMail.java" 	//인증 메일 > 레코드 삭제
+	                       > "ValidMail.java"	//검증
+	                       
 	- views > "user" > "register.jsp"
 	                 > "login.jsp"
 	                 > "info.jsp"
@@ -95,10 +101,19 @@
 	- webapp > asset > "pic"
 					 > pic > "pic.png"
 
-
-
-
-
+	- 이메일 전송
+	- 라이브러리 > javax.mail, javax.activation
+	- com.test.java.test > "Email.java"
+	
+7.4 권한
+	- 회원 + 메모장
+	
+	- 목록 보기 > 모든 사람(인증O, 인증X)
+	- 쓰기 > 회원만(인증O)
+	
+	- 상세 보기 > 모든 사람(인증O, 인증X)
+	- 수정하기 > 회원만(인증O)
+	- 삭제하기 > 회원만(인증O)
 
 
 
